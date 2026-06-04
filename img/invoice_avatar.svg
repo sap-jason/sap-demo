@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'>
+  <circle cx='150' cy='150' r='150' fill='#E8F0FE'/>
+  <ellipse cx='150' cy='262' rx='82' ry='58' fill='#3d6b9e'/>
+  <polygon points='130,208 150,242 110,282 86,256' fill='#2d5480'/>
+  <polygon points='170,208 150,242 190,282 214,256' fill='#2d5480'/>
+  <path d='M143 210 Q150 222 157 210 Q153 218 150 225 Q147 218 143 210Z' fill='#e8a0b0'/>
+  <polygon points='140,210 150,232 160,210' fill='#fff'/>
+  <rect x='136' y='184' width='28' height='28' rx='7' fill='#f0b080'/>
+  <ellipse cx='150' cy='152' rx='56' ry='63' fill='#f0b080'/>
+  <ellipse cx='150' cy='106' rx='56' ry='30' fill='#1a0c06'/>
+  <rect x='94' y='106' width='112' height='25' fill='#1a0c06'/>
+  <ellipse cx='150' cy='95' rx='22' ry='18' fill='#1a0c06'/>
+  <rect x='94' y='118' width='13' height='18' rx='5' fill='#1a0c06'/>
+  <rect x='193' y='118' width='13' height='18' rx='5' fill='#1a0c06'/>
+  <circle cx='94' cy='155' r='5' fill='none' stroke='#d4a030' stroke-width='2'/>
+  <circle cx='206' cy='155' r='5' fill='none' stroke='#d4a030' stroke-width='2'/>
+  <ellipse cx='130' cy='151' rx='10' ry='7' fill='#fff'/>
+  <ellipse cx='170' cy='151' rx='10' ry='7' fill='#fff'/>
+  <circle cx='131' cy='152' r='5' fill='#1a0c06'/>
+  <circle cx='171' cy='152' r='5' fill='#1a0c06'/>
+  <circle cx='133' cy='150' r='2' fill='#fff'/>
+  <circle cx='173' cy='150' r='2' fill='#fff'/>
+  <path d='M120 138 Q130 133 140 138' stroke='#1a0c06' stroke-width='2' fill='none' stroke-linecap='round'/>
+  <path d='M160 138 Q170 133 180 138' stroke='#1a0c06' stroke-width='2' fill='none' stroke-linecap='round'/>
+  <ellipse cx='150' cy='164' rx='5' ry='3' fill='#d48858'/>
+  <path d='M136 175 Q150 186 164 175' stroke='#c06870' stroke-width='2.5' fill='none' stroke-linecap='round'/>
+  <ellipse cx='116' cy='167' rx='13' ry='7' fill='#f09090' opacity='0.35'/>
+  <ellipse cx='184' cy='167' rx='13' ry='7' fill='#f09090' opacity='0.35'/>
+</svg>

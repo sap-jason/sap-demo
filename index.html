@@ -1015,6 +1015,9 @@ nav {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
   <div class="cta-banner">
     <h2>准备好开始您的数字化转型之旅？</h2>
     <p>立即体验 SAP 端到端业务演示，或访问 SAP 中国官网了解更多解决方案</p>
@@ -1615,19 +1618,8 @@ function handleFormSubmit(e) {
   });
 }
 
-// Init: fix demo canvas height explicitly
-(function fixDemoHeight() {
-  var nav = document.querySelector('nav');
-  var canvas = document.getElementById('demo-canvas');
-  if (canvas && nav) {
-    canvas.style.height = (window.innerHeight - nav.offsetHeight) + 'px';
-  }
-  window.addEventListener('resize', function() {
-    var nav = document.querySelector('nav');
-    var canvas = document.getElementById('demo-canvas');
-    if (canvas && nav) canvas.style.height = (window.innerHeight - nav.offsetHeight) + 'px';
-  });
-})();
+// no flow JS needed — SVG rect is pure CSS
+
 
 </script>
 </body>

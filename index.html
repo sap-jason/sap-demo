@@ -136,6 +136,20 @@ nav {
 .trust-num { font-size: 42px; font-weight: 700; color: #60B4FF; letter-spacing: -1px; margin-bottom: 8px; }
 .trust-desc { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
 
+/* ── LOCAL ADVANTAGE ── */
+.local-adv-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+}
+.local-adv-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+@media (max-width: 800px) {
+  .local-adv-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 480px) {
+  .local-adv-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+
 /* ── STRATEGY ── */
 .strategy-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
@@ -971,7 +985,7 @@ nav {
   <!-- China Localization -->
   <div class="section">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+      <div class="local-adv-grid">
         <div>
           <div class="chip">🇨🇳 本土化优势</div>
           <div class="section-title" style="margin-bottom:16px;">深耕中国，符合本地合规</div>
@@ -982,7 +996,7 @@ nav {
             全球超过 440,000 家客户、业务遍及 180+ 个国家的实践经验，结合 SAP 在中国的深耕积累，为中国企业"走出去"与全球化运营提供坚实的技术底座。
           </p>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="local-adv-stats">
           <div style="background:linear-gradient(135deg,#E8F0FE,#C8D9FF);border-radius:12px;padding:24px;text-align:center;">
             <div style="font-size:32px;font-weight:700;color:var(--sap-blue);">12</div>
             <div style="font-size:13px;color:var(--ink-3);margin-top:4px;">城市设有<br/>办事机构</div>
@@ -1001,10 +1015,6 @@ nav {
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
   <div class="cta-banner">
     <h2>准备好开始您的数字化转型之旅？</h2>
     <p>立即体验 SAP 端到端业务演示，或访问 SAP 中国官网了解更多解决方案</p>

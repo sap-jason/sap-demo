@@ -723,7 +723,7 @@ nav {
   color: #fff;
 }
 .pw-logo { margin-bottom: 28px; }
-.pw-logo img { height: 36px; filter: brightness(0) invert(1); }
+.pw-logo svg { height: 64px; width: auto; }
 .pw-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
 .pw-sub { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 32px; }
 .pw-input {
@@ -740,7 +740,8 @@ nav {
 .pw-input.error { border-color: #ff6b6b; animation: shake 0.3s ease; }
 .pw-btn {
   width: 100%; padding: 14px;
-  background: #fff; color: var(--sap-dark);
+  background: linear-gradient(135deg, #0070f2, #0050c4);
+  color: #fff;
   font-size: 15px; font-weight: 700;
   border: none; border-radius: 10px;
   cursor: pointer; transition: opacity 0.2s;
@@ -760,7 +761,7 @@ nav {
 <!-- ── PASSWORD GATE ── -->
 <div id="pw-gate">
   <div class="pw-box">
-    <div class="pw-logo"><img src="img/sap_logo_only.svg" alt="SAP"/></div>
+    <div class="pw-logo"><svg viewBox="0 0 202 100" xmlns="http://www.w3.org/2000/svg"><polygon points="0,100 102,100 202,0 0,0" fill="#1a6ed8"/><text x="28" y="72" font-family="Arial,sans-serif" font-size="72" font-weight="900" fill="#fff" letter-spacing="-2">SAP</text></svg></div>
     <div class="pw-title">SAP 端到端业务演示</div>
     <div class="pw-sub">请输入访问密码</div>
     <input id="pw-input" class="pw-input" type="password" placeholder="输入密码" autocomplete="off" maxlength="32"/>
@@ -776,6 +777,7 @@ nav {
   </a>
   <ul class="nav-tabs">
     <li><button class="nav-tab active" onclick="showPage('intro')">SAP 介绍</button></li>
+    <li><button class="nav-tab" onclick="showPage('autonomous')">自主运营企业</button></li>
     <li><button class="nav-tab" onclick="showPage('demo')">Demo 演示</button></li>
     <li><button class="nav-tab" onclick="showPage('contact')">联系我们</button></li>
   </ul>
@@ -1082,6 +1084,135 @@ nav {
         ▶ 立即体验端到端 Demo
       </button>
       <a class="btn-outline" href="https://www.sap.cn" target="_blank" style="padding:16px 32px;font-size:15px;">访问 SAP 中国官网</a>
+    </div>
+  </div>
+
+</div>
+<!-- ══════════════════════════════════════════
+     PAGE 2: 自主运营企业
+══════════════════════════════════════════ -->
+<div id="page-autonomous" class="page">
+
+  <!-- Hero -->
+  <div style="background:linear-gradient(135deg,#0d1b3e 0%,#1a2d6e 60%,#2a3f8f 100%);color:#fff;padding:60px 48px 0;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 75% 50%,rgba(100,80,200,0.25) 0%,transparent 65%);pointer-events:none;"></div>
+    <img src="img/ae_hero_img.png" style="position:absolute;bottom:-40px;right:-60px;width:320px;opacity:0.7;pointer-events:none;" alt=""/>
+
+    <div style="max-width:1100px;margin:0 auto;position:relative;">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:48px;">
+        <div style="padding-bottom:20px;">
+          <div style="display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;letter-spacing:2px;color:rgba(255,255,255,0.6);margin-bottom:24px;">AUTONOMOUS ENTERPRISE</div>
+          <h1 style="font-size:clamp(26px,3.5vw,44px);font-weight:700;line-height:1.2;margin-bottom:18px;">助力企业转型为<br/><span style="color:#a78bfa;">自主运营型企业</span></h1>
+          <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);max-width:420px;">优化全球最核心的业务流程，使人与 AI 能够无缝协作，在安全可控的前提下，更高效、更具战略性地满足不断加速的商业需求。</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <img src="img/ae_diagram.png" alt="SAP业务AI平台架构图"
+               style="width:100%;max-width:500px;object-fit:contain;filter:drop-shadow(0 8px 32px rgba(80,40,200,0.35));">
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start;padding-bottom:56px;border-top:1px solid rgba(255,255,255,0.1);padding-top:36px;">
+        <div>
+          <div style="font-size:28px;font-weight:700;color:#fff;margin-bottom:12px;">自主企业是...</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:16px;">未来商业运营的新模式：</div>
+          <div style="font-size:15px;font-weight:600;color:rgba(255,255,255,0.75);margin-bottom:6px;">企业制控战略</div>
+          <div style="font-size:15px;font-weight:600;color:rgba(255,255,255,0.75);">AI 落地执行</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span style="font-size:14px;color:rgba(255,255,255,0.85);">通过 <strong style="color:#c4b5fd;">AI 助理</strong>自主管理全流程端到端业务，实现智能运转</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span style="font-size:14px;color:rgba(255,255,255,0.85);">一体化运行，互联互通、动态适配，实现<strong style="color:#c4b5fd;">实时响应</strong></span>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span style="font-size:14px;color:rgba(255,255,255,0.85);">从开始便以<strong style="color:#c4b5fd;">行业相关业务场景</strong>运行</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span style="font-size:14px;color:rgba(255,255,255,0.85);">以<strong style="color:#c4b5fd;">企业级治理</strong>贯穿全程，在每一个行动中建立信任</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VIDEO LIBRARY -->
+  <div style="background:#f0f2f8;padding:48px 48px 40px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="display:inline-block;background:#e8e4f8;border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;letter-spacing:1.5px;color:#7c3aed;margin-bottom:14px;">VIDEO LIBRARY</div>
+      <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#1a1a2e;margin-bottom:24px;">深入了解SAP Business AI</h2>
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.18);background:#000;">
+        <iframe
+          src="https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_o2057tza"
+          style="width:100%;height:480px;border:none;display:block;"
+          allow="fullscreen"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO LIBRARY -->
+  <div style="background:#f7f9fc;padding:48px 48px 64px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="display:inline-block;background:#e8e4f8;border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;letter-spacing:1.5px;color:#7c3aed;margin-bottom:14px;">DEMO LIBRARY</div>
+      <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#1a1a2e;margin-bottom:24px;">深入了解SAP智能体</h2>
+      <div style="display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start;">
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.18);background:#000;">
+          <iframe
+            id="agent-video-frame"
+            src="https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_hvg1rgar"
+            style="width:100%;height:420px;border:none;display:block;"
+            allow="fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="font-size:12px;color:#718096;margin-bottom:10px;font-weight:600;">演示列表 · 7 个视频</div>
+          <div class="agent-tab active-agent" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_hvg1rgar')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.25);">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">SAP月结预检查智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Month-End Pre-Check Agent</div>
+          </div>
+          <div class="agent-tab" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_yfffeebp')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:transparent;border:1px solid transparent;">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">采购监控智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Procurement Monitoring Agent</div>
+          </div>
+          <div class="agent-tab" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_qmeotpnx')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:transparent;border:1px solid transparent;">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">订单风控智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Order Risk Control Agent</div>
+          </div>
+          <div class="agent-tab" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_a1xzn89x')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:transparent;border:1px solid transparent;">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">订单处理智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Order Processing Agent</div>
+          </div>
+          <div class="agent-tab" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_t27p1mvx')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:transparent;border:1px solid transparent;">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">结算校验智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Settlement Verification Agent</div>
+          </div>
+          <div class="agent-tab" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_9kmr2log')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:transparent;border:1px solid transparent;">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">库存调拨智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Inventory Transfer Agent</div>
+          </div>
+          <div class="agent-tab" onclick="switchAgent(this,'https://sapvideo.cfapps.eu10-004.hana.ondemand.com/?entry_id=1_in26u4kr')" style="border-radius:10px;padding:12px 14px;cursor:pointer;background:transparent;border:1px solid transparent;">
+            <div style="font-size:13px;font-weight:600;color:#1a1a2e;">主数据匹配智能体</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">Master Data Matching Agent</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1508,11 +1639,21 @@ function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
-  const tabs = { intro: 0, demo: 1, contact: 2 };
-  document.querySelectorAll('.nav-tab')[tabs[id]].classList.add('active');
+  const tabs = { intro: 0, autonomous: 1, demo: 2, contact: 3 };
+  if (tabs[id] !== undefined) document.querySelectorAll('.nav-tab')[tabs[id]].classList.add('active');
   window.scrollTo(0, 0);
   if (id !== 'demo') closeAllPopups();
   if (id === 'demo') { preloadSaleo(); requestAnimationFrame(positionFlowArrows); }
+}
+
+function switchAgent(el, url) {
+  document.querySelectorAll('.agent-tab').forEach(t => {
+    t.style.background = 'transparent';
+    t.style.border = '1px solid transparent';
+  });
+  el.style.background = 'rgba(124,58,237,0.1)';
+  el.style.border = '1px solid rgba(124,58,237,0.25)';
+  document.getElementById('agent-video-frame').src = url;
 }
 
 function positionFlowArrows() {

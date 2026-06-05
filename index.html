@@ -1683,6 +1683,8 @@ function positionFlowArrows() {
     `${bx+hh},${by-hw} ${bx+hh},${by+hw} ${bx-hh},${by}`);
 }
 
+window.addEventListener('resize', () => { requestAnimationFrame(positionFlowArrows); });
+
 function closeAllPopups() {
   ['sales','planner','engineer','invoice','warehouse'].forEach(r => {
     const rb = document.getElementById('rb-' + r);

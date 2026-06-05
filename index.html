@@ -705,9 +705,69 @@ nav {
 /* DIVIDER */
 .divider { height: 1px; background: var(--border); margin: 0 48px; }
 
+/* ── PASSWORD GATE ── */
+#pw-gate {
+  position: fixed; inset: 0; z-index: 9999;
+  background: linear-gradient(135deg, var(--sap-dark) 0%, #002E8C 50%, #0050C4 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+#pw-gate.hidden { display: none; }
+.pw-box {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 48px 40px;
+  width: min(380px, 90vw);
+  text-align: center;
+  color: #fff;
+}
+.pw-logo { margin-bottom: 28px; }
+.pw-logo img { height: 36px; filter: brightness(0) invert(1); }
+.pw-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.pw-sub { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 32px; }
+.pw-input {
+  width: 100%; padding: 14px 18px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: #fff; font-size: 16px; letter-spacing: 3px;
+  outline: none; margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.pw-input::placeholder { letter-spacing: 0; color: rgba(255,255,255,0.35); }
+.pw-input:focus { border-color: rgba(255,255,255,0.5); }
+.pw-input.error { border-color: #ff6b6b; animation: shake 0.3s ease; }
+.pw-btn {
+  width: 100%; padding: 14px;
+  background: #fff; color: var(--sap-dark);
+  font-size: 15px; font-weight: 700;
+  border: none; border-radius: 10px;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.pw-btn:hover { opacity: 0.9; }
+.pw-err { font-size: 13px; color: #ff9999; margin-top: 12px; min-height: 18px; }
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
 </style>
 </head>
 <body>
+
+<!-- ── PASSWORD GATE ── -->
+<div id="pw-gate">
+  <div class="pw-box">
+    <div class="pw-logo"><img src="img/sap_logo_only.svg" alt="SAP"/></div>
+    <div class="pw-title">SAP 端到端业务演示</div>
+    <div class="pw-sub">请输入访问密码</div>
+    <input id="pw-input" class="pw-input" type="password" placeholder="输入密码" autocomplete="off" maxlength="32"/>
+    <button class="pw-btn" onclick="checkPassword()">进入演示</button>
+    <div class="pw-err" id="pw-err"></div>
+  </div>
+</div>
 
 <!-- ── NAV ── -->
 <nav>
@@ -1616,6 +1676,32 @@ function handleFormSubmit(e) {
 
 // no flow JS needed — SVG rect is pure CSS
 
+// ── PASSWORD GATE ──
+(function() {
+  if (sessionStorage.getItem('sap_auth') === '1') {
+    document.getElementById('pw-gate').classList.add('hidden');
+  }
+})();
+
+function checkPassword() {
+  const val = document.getElementById('pw-input').value;
+  if (val === 'pas') {
+    sessionStorage.setItem('sap_auth', '1');
+    document.getElementById('pw-gate').classList.add('hidden');
+  } else {
+    const input = document.getElementById('pw-input');
+    const err = document.getElementById('pw-err');
+    input.classList.add('error');
+    err.textContent = '密码错误，请重试';
+    setTimeout(() => { input.classList.remove('error'); input.value = ''; }, 600);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('pw-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkPassword();
+  });
+});
 
 </script>
 </body>
